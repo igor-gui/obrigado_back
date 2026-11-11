@@ -1,6 +1,6 @@
 import app from './app';
 import { Express } from 'express';
-import { connectDb, disconnectDB } from './config';
+import { connectDb, disconnectDB } from '@/config';
 
 function init(): Promise<Express> {
     connectDb();

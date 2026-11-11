@@ -1,11 +1,12 @@
 export type CreatePaymentParams = {
-    
+
     gaverId: number,
     receiverId: number,
     value: number,
 }
 
 export type PaymentParams = {
+    id: number | undefined,
     receiverNick: string,
     receiverEmail: string,
     authorization: string,
@@ -13,6 +14,7 @@ export type PaymentParams = {
 }
 
 export type CreateUserParams = {
+    id: number,
     nickName: string,
     email: string,
     password: string
@@ -27,4 +29,10 @@ export type AplicationError = {
 export type CreateSessionParams = {
     email: string,
     password: string
+}
+
+export type ApiUser = {
+    id: number,
+    nickName: string,
+    email: string
 }

@@ -1,7 +1,7 @@
 import 'reflect-metadata'
 import express from 'express';
 import cors from 'cors';
-import { createEnvs } from './config';
+import { createEnvs } from '@/config';
 import * as router from '@/routers'
 import { errorHandler } from '@/middlewares';
 createEnvs()

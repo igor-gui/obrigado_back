@@ -11,7 +11,7 @@ router.get('/users', async (_req, res) => {
         const users = await prisma.user.findMany()
         console.log(users)
         return res.send(users)
-    } catch (error) {
+    } catch (error: any) {
         res.send(error.message)
     }
 });

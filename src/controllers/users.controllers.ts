@@ -9,7 +9,7 @@ export async function createNewUser(req: Request, res: Response, next: NextFunct
         const user = await newUser(body);
         return res.send(user).status(httpStatus.CREATED);
     }
-    catch (err) {
+    catch (err: any) {
         console.error(err)
         const ERROR_DEV_MESSAGE: string = `ERROR MESSAGE: ${err.message}`;
         console.log(ERROR_DEV_MESSAGE);

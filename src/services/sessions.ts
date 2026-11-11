@@ -10,6 +10,10 @@ export async function login(session: CreateSessionParams) {
 
 async function checkPassword({ email, password }: CreateSessionParams) {
     const user = await getUserByEmail(email);
+
+    if (!user) {
+    throw new Error("Recipient not found");
+}
     const passwordsMatch = compareSync(password, user.password);
 
     if(passwordsMatch){

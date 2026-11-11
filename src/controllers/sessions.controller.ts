@@ -10,7 +10,7 @@ export async function startSession(req: Request, res: Response, next: NextFuncti
         const { token } = await login(body);
         return res.status(httpStatus.CREATED).send(token);
     }
-    catch (err) {
+    catch (err: any) {
         const ERROR_DEV_MESSAGE = `ERROR MESSAGE: ${err.message}.`;
         console.log(ERROR_DEV_MESSAGE);
         next(err)
